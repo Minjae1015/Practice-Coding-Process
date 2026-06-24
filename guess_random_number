@@ -1,0 +1,16 @@
+import random
+
+name = input("Enter your name: ")
+print("Hello," + name + "! Welcome to the game.")
+
+random_number = random.randint(1, 100)#1-100 랜덤한 정수
+answer = int(input("Guess a number between 1 and 100: "))
+
+while answer != random_number: # 끝날 때까지 반복
+    if answer < random_number:
+        print("Too low! Try again.")
+    else:
+        print("Too high! Try again.")
+        
+    answer = int(input("Guess a number between 1 and 100: "))
+print("Congratulations! You guessed the correct number:", random_number)
